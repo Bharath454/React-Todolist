@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-color: #f97316; /* Modern Amber Orange */
+  --primary-hover: #ea580c;
+  --bg-gradient: linear-gradient(135deg, #fdfcfb 0%, #ffece0 100%); /* Elegant mesh gradient */
+  --card-bg: rgba(255, 255, 255, 0.9);
+  
+  /* Text and Borders */
+  --text-dark: #1e293b; /* Sleek Dark Slate */
+  --text-gray: #64748b; /* Professional Muted Slate */
+  --border-color: rgba(30, 41, 59, 0.08);
+  --border-focus: rgba(249, 115, 22, 0.4);
+  
+  /* Utilities */
+  --shadow-premium: 0 20px 40px -15px rgba(249, 115, 22, 0.08), 0 8px 16px -8px rgba(30, 41, 59, 0.04);
+  --shadow-glow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  overflow: hidden; /* Prevent page-level scrollbars, keep scroll within screen */
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, monospace;
+}

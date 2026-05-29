@@ -1,0 +1,279 @@
+/* ==========================================
+   PREMIUM TODO APP STYLING (PROPER DESIGN)
+   ========================================== */
+
+/* Main Card Wrapper */
+.app-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh; /* Strictly bound card within device height */
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.app-card:hover {
+  box-shadow: 0 30px 60px -15px rgba(249, 115, 22, 0.12), 0 10px 20px -8px rgba(30, 41, 59, 0.05);
+}
+
+/* Header & Title */
+.app-header {
+  margin-bottom: 1.75rem;
+  text-align: center;
+  position: relative;
+}
+
+.app-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.75px;
+  display: inline-block;
+  position: relative;
+}
+
+.app-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  border-radius: 99px;
+}
+
+/* Form Styles */
+.add-item-container,
+.search-container {
+  margin-bottom: 1.25rem;
+}
+
+.add-item-label,
+.search-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--text-gray);
+  margin-bottom: 0.4rem;
+}
+
+.add-item-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-item-input,
+.search-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--text-dark);
+  outline: none;
+  transition: var(--transition);
+}
+
+.add-item-input::placeholder,
+.search-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.add-item-input:focus,
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+  background-color: #ffffff;
+}
+
+/* Submit Button */
+.add-item-btn {
+  padding: 0.75rem 1.35rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff9233, #f97316);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+  transition: var(--transition);
+}
+
+.add-item-btn:hover {
+  background: linear-gradient(135deg, #ffa352, #ea580c);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.35);
+}
+
+.add-item-btn:active {
+  transform: translateY(0);
+}
+
+/* Scrollable Content Boundary */
+.app-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 0.5rem 0;
+  padding-right: 0.35rem;
+}
+
+/* Customized Human Scrollbar */
+.app-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.app-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+  background: rgba(30, 41, 59, 0.12);
+  border-radius: 10px;
+}
+
+.app-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 41, 59, 0.25);
+}
+
+/* Todo List Items styling */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.01);
+  transition: var(--transition);
+}
+
+.todo-item:hover {
+  border-color: rgba(249, 115, 22, 0.25);
+  background-color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.03);
+}
+
+.todo-item.checked {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(30, 41, 59, 0.03);
+  opacity: 0.6;
+}
+
+.todo-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.todo-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  border-radius: 6px;
+  border: 1.5px solid var(--border-color);
+}
+
+.todo-label {
+  font-size: 0.95rem;
+  font-weight: 550;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.todo-item.checked .todo-label {
+  text-decoration: line-through;
+  color: var(--text-gray);
+}
+
+/* Sleek Action Button */
+.todo-delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.todo-delete-btn:hover {
+  color: #ef4444;
+  background-color: #fee2e2;
+}
+
+/* Footer Section */
+.app-footer {
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px dashed var(--border-color);
+  text-align: center;
+}
+
+.footer-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+/* Status alerts */
+.status-message {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 550;
+  padding: 1.75rem 0;
+}
+
+.status-message.loading {
+  color: var(--text-gray);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.status-message.error {
+  color: #ef4444;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
